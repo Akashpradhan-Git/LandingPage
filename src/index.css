@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+:root{
+  --primary-red:#EC323B;
+  --sec-red:#FF464F;
+  --light-red:#FF464F;
+  --background-sec:#F6F6F6;
+}
+
+
+/* Style file */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+.header{
+width: 100%;
+height: 13vh;
+left: 0px;
+top: 0px;
+background: #ffff;
+box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.warp-nav .logo{
+  margin-top: 10px;
+}
+
+.warp-nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px;
+}
+.texts{
+  display: none;
+}
+
+.dropdown .dropbtn img{
+  height: 10px;
+  margin-left: 5px;
+}
+.texts .dropdown{
+  position: relative;
+  display:inline-block;
+}
+
+.dropdown .drop-option{
+  position: absolute;
+  background: var(--background-sec);
+  min-width: 160px;
+  z-index: 1;
+  display: none;
+}
+.dropdown .drop-option a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  padding:12px  16px;
+
+}
+.dropdown:hover .drop-option{
+  display: block;
+}
+.dropdown .drop-option a:hover {
+  background-color: var(--light-red);
+}
+
+.icon{
+  display: none;
+}
+.burger{
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+
+/* Burger menu */
+
+.burger .lines .line{
+  height: 2px;
+  width: 24px;
+  background: black;
+  margin-top: 2px;
+}
+.burger .lines .small{
+  width: 16px;
+}
+
+/* nav responsive */
+
+@media(min-width:900px)
+{
+  nav .warp-nav{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .texts{
+    display: inline;
+  
+  }
+  .icon{
+    display: inline;
+  }
+  
+  .warp-nav img{
+    height:50px;
+  }
+  
+  .warp-nav ul {
+    display: flex;
+    align-items: center;
+    vertical-align: baseline;
+  }
+  .warp-nav ul li{
+    list-style: none;
+    margin: 0px 10px;
+    font-size: 17px;
+  }
+  ul li{
+    cursor: pointer;
+  }
+  ul li:hover{
+    color: var(--light-red);
+  }
+  .warp-nav .texts{
+    margin-top: 25px;
+  }
+  .warp-nav .icon{
+    margin-top: 25px;
+  }
+  .warp-nav .icon img{
+    height: 15px;
+  }
+  .burger{
+   display: none;
+  }
+ 
+}
+
+
+/* body styles */
+
+
+.body{
+
+}
+.main{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main .image img{
+  max-width:400px;
+}
+.main .title{
+  text-align: center;
+  margin: 20px 20px;
+}
+.main .title .t-reg{
+  font-size: 34px;
+  font-weight: 600;
+}
+.main .title .t-red{
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--sec-red);
+}
+
+.title .sub-title{
+  margin: 20px 10px 20px 20px;
+}
+.sub-title p{
+  font-size: 20px;
+}
+.btn button{
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: 100;
+  border-radius: 5px;
+  border: none;
+  background: var(--sec-red);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: #ffff;
+  cursor: pointer;
+}
+.btn button:hover{
+  background: var(--primary-red);
+}
+
+
+/* style about page */
+
+
+.middle{
+  background: var(--background-sec);
+  margin-top: 40px;
+}
+
+.middle .wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.middle .wrapper img{
+  width: 349px;
+  height: 340px;
+}
+.middle .wrapper .title{
+  text-align: center;
+  margin: 40px 0px 40px 0px;
+ 
+}
+
+.title .tit{
+  font-size: 34px;
+  font-weight: 600;
+}
+.title .tit span{
+  color: var(--light-red);
+}
+.title .sub-tit{
+  margin: 0px 12px;
+}
+.title .sub-tit p{
+  margin: 25px 0px;
+  font-size: 17px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.sub-tit p span{
+  font-weight: bold;
+  color: var(--light-red);
+}
+
+
+
+/* style product  */
+
+.products{
+  margin-top: 40px;
+}
+
+.products p{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.products .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px ;
+}
+.products .wrapper .title{
+    color: var(--sec-red);
+    font-size: 30px;
+    
+}
+.products .wrapper .sub-tit{
+  font-size: 18px;
+  margin: 20px;
+  font-weight: 300;
+}
+
+.products .wrapper button{
+  padding:12px 24px;
+  background: var(--sec-red);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  outline-style:unset;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.151);
+}
+.products .wrapper button:hover{
+  background-color: var(--primary-red);
+}
+
+
+
+/* footer style */
+
+.footer{
+  margin-top: 100px;
+  
+}
+.footer-warp{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.footer-warp .info h4{
+  height: 40px;
+}
+
+
+/* contact */
+
+.footer-warp .contact{
+  margin-top: 30px;
+}
+.footer-warp .contact h3{
+  margin-bottom: 10px;
+}
+
+/* customer */
+.footer-warp .customer {
+  margin: 30px 0px;
+}
+.customer .cus img{
+  margin: 10px 10px;
+}
+.footer .foot{
+  height: 8vh;
+  width: 100%;
+  background: var(--sec-red);
+  text-align: center;
+}
+.footer .foot p{
+ padding: 15px 0px 0px 0px;
+ color: white;
+}
+
+
+@media(min-width:900px){
+  .main{
+    display: flex;
+    flex-direction: row;
+    margin-right: 157px;
+    margin-left: 151px;
+  }
+  .main .image{
+    order:2;
+  }
+  .main .title{ 
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .main .title .t-reg{
+    font-size: 48px;
+  }
+  .main .title .t-red{
+    font-size: 48px;
+  }
+  .title .sub-title{
+    text-align: justify;
+    text-justify: inter-word;
+    margin: 20px 0px;
+  }
+  
+  /* responsive about */
+
+  .middle .wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-right: 157px;
+    margin-left: 151px;
+  }
+
+  .middle .wrapper .title{
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 80px;
+  }
+  .middle .wrapper .sub-tit{
+    margin-left: 0px;
+  }
+
+  /* responsive products & service */
+
+  .container{
+    margin: 20px 80px;
+  }
+  .products .wrapper{
+    display: block;
+  }
+  .card{
+    width: 35%;
+  }
+  .container{
+    display: flex;
+  }
+  .products .wrapper .title{
+    display: flex;
+  }
+  .products .wrapper .sub-tit{ 
+   margin-left: 0px;
+   text-align: left;
+   font-size: 17px;
+  }
+  .products .wrapper button{
+    margin-top: 5px;
+
+  }
+
+
+  /* footer res */
+  .footer-warp{
+    display: flex;
+    flex-direction: row;
+    margin:0px 40px;
+  }
+  .footer-warp .card{
+     width: 30%;
+     margin-left: 50px;
+  }
+}
+
+
